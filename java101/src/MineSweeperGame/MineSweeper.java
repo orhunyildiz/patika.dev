@@ -5,9 +5,7 @@ import java.util.Scanner;
 public class MineSweeper {
     private int rowNumber;
     private int colNumber;
-
     private int numberOfMines;
-    private boolean isWin;
     private String[][] gameBoard;
     private String[][] minesBoard;
 
@@ -15,7 +13,6 @@ public class MineSweeper {
         this.rowNumber = rowNumber;
         this.colNumber = colNumber;
         numberOfMines = rowNumber * colNumber / 4;
-        isWin = false;
     }
 
     public void createGameBoard() {

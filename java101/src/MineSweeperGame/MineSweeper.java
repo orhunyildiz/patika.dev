@@ -112,9 +112,7 @@ public class MineSweeper {
     }
 
     public boolean checkBounds(int rowSel, int colSel) {
-        if (rowSel < 1 || colSel < 1 || rowSel > rowNumber || colSel > colNumber)
-            return false;
-        return true;
+        return rowSel >= 1 && colSel >= 1 && rowSel <= rowNumber && colSel <= colNumber;
     }
 
     public void printGameBoard() {

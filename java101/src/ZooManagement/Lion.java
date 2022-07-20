@@ -1,6 +1,6 @@
 package ZooManagement;
 
-public class Lion extends Felines {
+public class Lion extends Feline {
 
     private int lionMedicine;
     private int lionFeed;

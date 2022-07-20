@@ -40,8 +40,10 @@ public class Main {
         Lion lion1 = new Lion("Panthera Leo", 100, 5, false);
         Lion lion2 = new Lion("Panthera Leo", 25, 1, true);
         Tiger tiger1 = new Tiger("Panthera Tigris", 150, 7, false);
-
-        animals = new Animal[]{horse1, horse2, horse3, zebra1, zebra2, donkey1, lion1, lion2, tiger1};
+        Rat rat1 = new Rat("Rattus Norvegicus", 0.3, 1, 16);
+        Rat rat2 = new Rat("Rattus Rattus", 0.2, 1, 10);
+        Beaver beaver1 = new Beaver("Castor Canadensis", 15, 10, 20);
+        animals = new Animal[]{horse1, horse2, horse3, zebra1, zebra2, donkey1, lion1, lion2, tiger1, rat1, rat2, beaver1};
         return animals;
     }
 }

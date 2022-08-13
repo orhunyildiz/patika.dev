@@ -1,8 +1,6 @@
 package AdventureGame;
 
-import AdventureGame.Location.Location;
-import AdventureGame.Location.SafeHouse;
-import AdventureGame.Location.ToolStore;
+import AdventureGame.Location.*;
 import AdventureGame.Player.Player;
 
 import java.util.Scanner;
@@ -21,7 +19,7 @@ public class Game {
         while(true) {
             player.printInfo();
             System.out.println("Locations");
-            System.out.println("1. Safe House - You are safe here.\n2. Tool Store - You can buy weapons or armors here.\n0. Exit the Game - Return to Desktop.");
+            System.out.println("1. Safe House - You are safe here.\n2. Tool Store - You can buy weapons or armors here.\n3. Cave - There are zombies here. Award is food.\n4. Forest - There are vampires here. Award is a firewood.\n5. River - There are bears here. Award is some water.\n0. Exit the Game - Return to Desktop.");
             System.out.print("Please select where you want to go: ");
             int choice = scanner.nextInt();
             switch (choice) {
@@ -31,8 +29,17 @@ public class Game {
                 case 2:
                     location = new ToolStore(player);
                     break;
+                case 3:
+                    location = new Cave(player);
+                    break;
+                case 4:
+                    location = new Forest(player);
+                    break;
+                case 5:
+                    location = new River(player);
+                    break;
                 default:
-                    location = new SafeHouse(player);
+                    System.out.println("Please enter an available territory!");
             }
             if (location == null) {
                 System.out.println("You are exiting the Game.");

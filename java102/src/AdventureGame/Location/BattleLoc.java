@@ -24,8 +24,26 @@ public abstract class BattleLoc extends Location {
         System.out.println("(F)ight or (R)un");
         System.out.print("Make your choice: ");
         String choice = scanner.next().toUpperCase();
-        if (choice.equals("F") & combat(obsNumber)) {
+        if (choice.equals("F") && combat(obsNumber)) {
             System.out.println("You've beat all of the enemies!");
+            String wherePlayer = getLocationName();
+            switch (wherePlayer) {
+                case "Cave":
+                    System.out.println("You've got some food now.");
+                    getPlayer().getInventory().setFood(true);
+                    break;
+                case "Forest":
+                    System.out.println("You've got some firewood now.");
+                    getPlayer().getInventory().setFirewood(true);
+                    break;
+                case "River":
+                    System.out.println("You've got some water now.");
+                    getPlayer().getInventory().setWater(true);
+                    break;
+                default:
+                    System.out.println("Something Wrong!");
+                    break;
+            }
             return true;
         }
         if (getPlayer().getHealth() <= 0) {

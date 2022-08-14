@@ -15,7 +15,7 @@ public class Game {
         System.out.println("Please select your hero's class.");
         player.selectChar();
 
-        Location location = null;
+        Location location;
         while(true) {
             player.printInfo();
             System.out.println("Locations");
@@ -26,10 +26,17 @@ public class Game {
                 case 0:
                     location = null;
                     break;
+                case 1:
+                    location = new SafeHouse(player);
+                    break;
                 case 2:
                     location = new ToolStore(player);
                     break;
                 case 3:
+                    if (player.getInventory().isFood()) {
+                        System.out.println("You've got already food. You don't need to enter this cave. Please select another territory.");
+                        continue;
+                    }
                     location = new Cave(player);
                     break;
                 case 4:
@@ -40,6 +47,7 @@ public class Game {
                     break;
                 default:
                     System.out.println("Please enter an available territory!");
+                    continue;
             }
             if (location == null) {
                 System.out.println("You are exiting the Game.");
@@ -47,6 +55,10 @@ public class Game {
             }
             if (!location.onLocation()) {
                 System.out.println("You Died! Game Over!");
+                break;
+            }
+            if (player.getInventory().isFood() && player.getInventory().isFirewood() && player.getInventory().isWater()) {
+                System.out.println("You've finished the game! Congratulations. The End!");
                 break;
             }
         }

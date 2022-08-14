@@ -5,14 +5,12 @@ import AdventureGame.GameCharacter.Archer;
 import AdventureGame.GameCharacter.GameCharacter;
 import AdventureGame.GameCharacter.Knight;
 import AdventureGame.GameCharacter.Samurai;
-import AdventureGame.Location.Location;
-import AdventureGame.Location.SafeHouse;
-import AdventureGame.Location.ToolStore;
 
 import java.util.Scanner;
 
 public class Player {
     private int health;
+    private int originalHealth;
     private int damage;
     private int money;
     private String charName;
@@ -54,6 +52,7 @@ public class Player {
     public void initPlayer(GameCharacter gameCharacter) {
         setDamage(gameCharacter.getDamage());
         setHealth(gameCharacter.getHealth());
+        setOriginalHealth(gameCharacter.getHealth());
         setMoney(gameCharacter.getMoney());
         setCharName(gameCharacter.getName());
     }
@@ -112,5 +111,13 @@ public class Player {
 
     public void setInventory(Inventory inventory) {
         this.inventory = inventory;
+    }
+
+    public int getOriginalHealth() {
+        return originalHealth;
+    }
+
+    public void setOriginalHealth(int originalHealth) {
+        this.originalHealth = originalHealth;
     }
 }

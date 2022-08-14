@@ -48,7 +48,7 @@ public class Player {
                 setClassName("Samurai");
             }
         }
-        //System.out.println("Your character: " + getCharName() + "\nDamage: " + getDamage() + "\nHealth: " + getHealth() + "\nMoney: " + getMoney() + "\nClass: " + getClassName());
+        System.out.println("Your character: " + getCharName() + "\nDamage: " + getDamage() + "\nHealth: " + getHealth() + "\nMoney: " + getMoney() + "\nClass: " + getClassName());
     }
 
     public void initPlayer(GameCharacter gameCharacter) {
@@ -59,7 +59,7 @@ public class Player {
     }
 
     public void printInfo() {
-        System.out.println("Weapon: " + getInventory().getWeapon().getName() + " - Armor: " + getInventory().getArmor().getName() + " - Damage: " + getDamage() + " - Block Rate: " + getInventory().getArmor().getBlockRate() + " - Health: " + getHealth() + " - Money: " + getMoney() + " - Class: " + getClassName());
+        System.out.println("Weapon: " + getInventory().getWeapon().getName() + " - Armor: " + getInventory().getArmor().getName() + " - Damage: " + getTotalDamage() + " - Block Rate: " + getInventory().getArmor().getBlockRate() + " - Health: " + getHealth() + " - Money: " + getMoney() + " - Class: " + getClassName());
     }
 
     public int getHealth() {
@@ -70,8 +70,12 @@ public class Player {
         this.health = health;
     }
 
-    public int getDamage() {
+    public int getTotalDamage() {
         return damage + getInventory().getWeapon().getDamage();
+    }
+
+    public int getDamage() {
+        return damage;
     }
 
     public void setDamage(int damage) {

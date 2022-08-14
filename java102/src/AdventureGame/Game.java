@@ -19,7 +19,7 @@ public class Game {
         while(true) {
             player.printInfo();
             System.out.println("Locations");
-            System.out.println("1. Safe House - You are safe here.\n2. Tool Store - You can buy weapons or armors here.\n3. Cave - There are zombies here. Award is food.\n4. Forest - There are vampires here. Award is a firewood.\n5. River - There are bears here. Award is some water.\n0. Exit the Game - Return to Desktop.");
+            System.out.println("1. Safe House - You are safe here.\n2. Tool Store - You can buy weapons or armors here.\n3. Cave - There are zombies here. Money award: 4. Item award: Food.\n4. Forest - There are vampires here. Money award: 7. Item award: Firewood.\n5. River - There are bears here. Money award: 12. Item award: Water.\n0. Exit the Game - Return to Desktop.");
             System.out.print("Please select where you want to go: ");
             int choice = scanner.nextInt();
             switch (choice) {

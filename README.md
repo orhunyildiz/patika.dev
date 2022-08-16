@@ -1,2 +1,2 @@
 # patika.dev
-This repository for my patika.dev progress.
+This repository represents my patika.dev progress.

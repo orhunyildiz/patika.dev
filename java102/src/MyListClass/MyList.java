@@ -7,7 +7,7 @@ public class MyList<T> {
     private T[] array;
     private T[] tempArray;
     public MyList() {
-        this(10);
+        this(4);
     }
 
     public MyList(int capacity) {

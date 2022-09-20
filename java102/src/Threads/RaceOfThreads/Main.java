@@ -6,7 +6,7 @@ import java.util.concurrent.Executors;
 
 public class Main {
     public static void main(String[] args) {
-        ExecutorService executorService = Executors.newFixedThreadPool(5);
+        ExecutorService executorService = Executors.newFixedThreadPool(4);
         ArrayList<Integer> array = new ArrayList<>();
 
         for (int i = 0; i <= 100; i++)

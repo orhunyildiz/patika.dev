@@ -1,0 +1,139 @@
+a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray;
+    font-size: 15px;
+}
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray;
+}
+/* HEADER */
+.header-right {
+    float: right;
+}
+.gmail {
+    position: fixed;
+    top: 23px;
+    right: 290px;
+}
+.gorseller {
+    position: fixed;
+    top: 23px;
+    right: 215px;
+}
+.apps {
+    position: fixed;
+    top: 20px;
+    right: 160px;
+    height: 5px;
+}
+a.oturum:link,
+a.oturum:visited {
+    position: fixed;
+    top: 13px;
+    right: 20px;
+    background-color: rgb(27, 102, 201);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+a.oturum:hover,
+a.oturum:active {
+    background-color: rgb(18, 94, 194);
+    color: white;
+    border-radius: 3px;
+}
+
+/* LOGO */
+.logo {
+    margin-top: 170px;
+}
+
+/* SEARCH */
+.bar {
+    margin: 25px 0px 90px 480px;
+    width: 575px;
+    border-radius: 30px;
+    border: 1px solid #dcdcdc;
+}
+.bar:hover {
+    box-shadow: 1px 1px 8px 1px #dcdcdc;
+}
+.bar:focus-within {
+    box-shadow: 1px 1px 8px 1px #dcdcdc;
+    outline: none;
+}
+.search {
+    box-shadow: 1px 1px 8px 1px #dcdcdc;
+}
+.searchbar {
+    height: 45px;
+    border: none;
+    width: 500px;
+    font-size: 20px;
+    outline: none;
+}
+.searchicon {
+    height: 20px;
+    position: absolute;
+    top: 306px;
+    left: 500px;
+}
+.mic {
+    height: 28px;
+    position: absolute;
+    top: 300px;
+    right: 445px;
+}
+
+/* Buttons */
+.buttons {
+    margin-top: -65px;
+}
+.button {
+    background-color: #f5f5f5;
+    border: none;
+    color: #707070;
+    font-size: 15px;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 4px;
+    outline: none;
+}
+.button:hover {
+    border: 1px solid #c8c8c8;
+    padding: 9px 19px;
+    color: #808080;
+}
+.button:focus {
+    border: 1px solid #4885ed;
+}
+/* FOOTER */
+footer {
+    text-align: left;
+    background-color: rgb(242, 242, 242);
+    padding: 0px;
+    position: absolute;
+    bottom: 0;
+    width: 99.3%;
+}
+.first {
+    margin-inline: 18px;
+}
+.left {
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: gray;
+    padding: 3px;
+    margin-inline: 15px;
+}
+.right {
+    float: right;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: gray;
+    padding: 3px;
+    margin-inline: 15px;
+}
